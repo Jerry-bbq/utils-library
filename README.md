@@ -28,3 +28,17 @@ npm i utils-library -S
 ````
 import { digitUppercase } from 'utils-library'
 ````
+
+包含的工具类函数：
+
+````
+    hasClass,
+    addClass,
+    removeClass,
+    getCookie,
+    setCookie,
+    removeCookie,
+    digitUppercase,
+    regID,
+    regPhoneregID
+````
