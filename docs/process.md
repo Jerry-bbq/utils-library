@@ -37,3 +37,17 @@ touch src/class/addClass.js src/class/hasClass.js src/class/removeClass.js
 ````
 
 支持：common.js esm，umd
+
+es6模块写法，npm发布注意事项：
+1. 创建.babelrc文件
+````
+{
+    "presets": ["es2015", "stage-2"],
+    "plugins": ["transform-runtime"],
+    "comments": false
+}
+````
+2. package.json配置
+````
+"main": "src/index.js",
+````
