@@ -1,6 +1,6 @@
 /* 
  * this is a my JavaScript library
- * v1.0.0 
+ * v1.0.2 
  */
 'use strict';
 
@@ -121,6 +121,39 @@ function digitUppercase(n) {
         .replace(/^整$/, '零元整');
 }
 
+/**
+ * 15位和18位身份证号码验证
+ * @returns {RegExp}
+ */
+function regID() {
+    return /(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)|(^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{2}$)/;
+}
+
+/**
+ * 手机号码正则
+ * 2018/4/12号整理
+ 中国移动号段：134 135 136 137 138 139 147 150 151 152 157 158 159 178 182 183 184 187 188
+ 联通号段：186 185 156 131 130 155 132 176
+ 电信号段：189 181 180 153 133 177 173 199
+ 整理：
+ 130 131 132 133 134 135 136 137 138 139
+ 147
+ 150 151 152 153（缺少154） 155 156 157 158 159
+ 173 176 177 178
+ 180 181 182 183 184 185 186 187 188 189
+ 199
+ 第一位：1
+ 第二位：3 4 5 7 8 9
+ 第三位：根据第二位判断第三位
+ 后面八位：0-9
+ * @returns {RegExp}
+ */
+function regPhone() {
+    return /^((13[0-9])|(147)|(15([0-3]|(5-9)))|(17[3678])|(18[0-9])|(199))\d{8}$/;
+}
+
+// class
+
 exports.hasClass = hasClass;
 exports.addClass = addClass;
 exports.removeClass = removeClass;
@@ -128,3 +161,5 @@ exports.getCookie = getCookie;
 exports.setCookie = setCookie;
 exports.removeCookie = removeCookie;
 exports.digitUppercase = digitUppercase;
+exports.regID = regID;
+exports.regPhoneregID = regPhone;
