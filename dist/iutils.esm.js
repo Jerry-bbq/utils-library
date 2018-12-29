@@ -1,6 +1,6 @@
 /* 
  * this is a my JavaScript library
- * v1.0.2 
+ * v1.0.3 
  */
 /**
  * 
@@ -148,6 +148,33 @@ function regPhone() {
     return /^((13[0-9])|(147)|(15([0-3]|(5-9)))|(17[3678])|(18[0-9])|(199))\d{8}$/;
 }
 
+/**
+ * @desc 数组,对象的深拷贝
+ */
+var deepClone = function(obj) {
+    // 先检测是不是数组和Object
+    // let isArr = Object.prototype.toString.call(obj) === '[object Array]';
+    var isArr = Array.isArray(obj);
+    var isJson = Object.prototype.toString.call(obj) === '[object Object]';
+    if (isArr) {
+      // 克隆数组
+      var newObj = [];
+      for (var i = 0; i < obj.length; i++) {
+        newObj[i] = deepClone(obj[i]);
+      }
+      return newObj;
+    } else if (isJson) {
+      // 克隆Object
+      var newObj$1 = {};
+      for (var i$1 in obj) {
+        newObj$1[i$1] = deepClone(obj[i$1]);
+      }
+      return newObj$1;
+    }
+    // 不是引用类型直接返回
+    return obj;
+  };
+
 // class
 
-export { hasClass, addClass, removeClass, getCookie, setCookie, removeCookie, digitUppercase, regID, regPhone as regPhoneregID };
+export { hasClass, addClass, removeClass, getCookie, setCookie, removeCookie, digitUppercase, regID, regPhone as regPhoneregID, deepClone };

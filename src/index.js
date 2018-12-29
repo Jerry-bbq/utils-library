@@ -11,6 +11,8 @@ import digitUppercase from './digitUppercase/digitUppercase'
 // 正则校验
 import regID from './reg/idCard'
 import regPhoneregID from './reg/mobilePhone'
+// 数组
+import deepClone from './array/deepClone'
 
 
 
@@ -23,5 +25,6 @@ export {
     removeCookie,
     digitUppercase,
     regID,
-    regPhoneregID
+    regPhoneregID,
+    deepClone
 }
