@@ -17,6 +17,7 @@
  后面八位：0-9
  * @returns {RegExp}
  */
-export default function regPhone() {
-    return /^((13[0-9])|(147)|(15([0-3]|(5-9)))|(17[3678])|(18[0-9])|(199))\d{8}$/;
+export default function regPhone(mobile) {
+    let reg = /^((13[0-9])|(147)|(15([0-3]|(5-9)))|(17[3678])|(18[0-9])|(199))\d{8}$/;
+    return reg.test(mobile);
 }
