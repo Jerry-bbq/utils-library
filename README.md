@@ -39,8 +39,8 @@ import { digitUppercase } from 'utils-library'
     setCookie,
     removeCookie,
     digitUppercase,
-    regID,
-    regMobile,
-    regCommonMobile
+    checkID,
+    checkMobile,
+    checkCommonMobile
     deepClone
 ````
