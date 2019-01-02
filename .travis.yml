@@ -11,8 +11,8 @@ branches:
 
 # 执行install
 install:
-- npm install
+- yarn install
 
 # 执行命令脚本
-scripts:
-- npm run build
+script:
+- yarn run build
