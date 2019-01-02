@@ -40,6 +40,7 @@ import { digitUppercase } from 'utils-library'
     removeCookie,
     digitUppercase,
     regID,
-    regPhoneregID,
+    regMobile,
+    regCommonMobile
     deepClone
 ````

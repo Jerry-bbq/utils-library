@@ -51,3 +51,8 @@ es6模块写法，npm发布注意事项：
 ````
 "main": "src/index.js",
 ````
+
+使用travis持续集成
+````
+touch .travis.yml
+````

@@ -127,7 +127,7 @@
      * 15位和18位身份证号码验证
      * @returns {RegExp}
      */
-    function regID(id) {
+    function checkID(id) {
         var reg = /(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)|(^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{2}$)/;
         return reg.test(id);
     }
@@ -151,8 +151,16 @@
      后面八位：0-9
      * @returns {RegExp}
      */
-    function regPhone(mobile) {
+    function checkMobile(mobile) {
         var reg = /^((13[0-9])|(147)|(15([0-3]|(5-9)))|(17[3678])|(18[0-9])|(199))\d{8}$/;
+        return reg.test(mobile);
+    }
+
+    /**
+     * 校验1开头的11位手机号码
+     */
+    function checkCommonMobile(mobile) {
+        var reg = /^[1][0-9]{10}$/;
         return reg.test(mobile);
     }
 
@@ -192,8 +200,9 @@
     exports.setCookie = setCookie;
     exports.removeCookie = removeCookie;
     exports.digitUppercase = digitUppercase;
-    exports.regID = regID;
-    exports.regPhoneregID = regPhone;
+    exports.checkID = checkID;
+    exports.checkMobile = checkMobile;
+    exports.checkCommonMobile = checkCommonMobile;
     exports.deepClone = deepClone;
 
     Object.defineProperty(exports, '__esModule', { value: true });

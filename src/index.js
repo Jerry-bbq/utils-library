@@ -9,8 +9,9 @@ import removeCookie from './cookie/removeCookie'
 // 数字转汉字大写
 import digitUppercase from './digitUppercase/digitUppercase'
 // 正则校验
-import regID from './reg/idCard'
-import regPhoneregID from './reg/mobilePhone'
+import checkID from './reg/idCard'
+import checkMobile from './reg/mobile'
+import checkCommonMobile from './reg/commonMobile'
 // 数组
 import deepClone from './array/deepClone'
 
@@ -24,7 +25,8 @@ export {
     setCookie,
     removeCookie,
     digitUppercase,
-    regID,
-    regPhoneregID,
+    checkID,
+    checkMobile,
+    checkCommonMobile,
     deepClone
 }
