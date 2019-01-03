@@ -41,6 +41,7 @@ import { digitUppercase } from 'utils-library'
     digitUppercase,
     checkID,
     checkMobile,
-    checkCommonMobile
+    checkCommonMobile,
+    trim,
     deepClone
 ````
