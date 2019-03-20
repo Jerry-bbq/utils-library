@@ -1,6 +1,6 @@
 /**
  * 
- * @desc   现金额转大写
+ * @desc   现金额阿拉伯数字转换为数字大写
  * @param  {Number} n 
  * @return {String}
  */
