@@ -29,19 +29,25 @@ npm i utils-library -S
 import { digitUppercase } from 'utils-library'
 ````
 
-包含的工具类函数：
+## api
+
+### DOM
+
+* [hasClass](./src/dom/hasClass.js)
+
 
 ````
-    hasClass,
-    addClass,
-    removeClass,
-    getCookie,
-    setCookie,
-    removeCookie,
-    digitUppercase,
-    checkID,
-    checkMobile,
-    checkCommonMobile,
-    trim,
-    deepClone
+    hasClass, // 是否有class
+    addClass, // 添加class
+    removeClass, // 删除class
+    getCookie, // 获取cookie
+    setCookie, // 设置cookie
+    removeCookie, // 删除cookie
+    digitUppercase, // 阿拉伯数字金额转换为汉字金额
+    checkID,// 校验身份证号码
+    checkMobile, // 校验严格手机号码
+    checkCommonMobile,// 校验常规的手机号码
+    trim,// 清空字符串的前后空格
+    deepClone,// 数组深拷贝
+    isEmptyObject// 是否是一个空对象
 ````
