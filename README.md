@@ -33,7 +33,7 @@ npm i utils-library -S
 import { digitUppercase } from 'utils-library'
 ```
 
-## api
+## API文档
 
 ### DOM操作相关
 
