@@ -10,8 +10,8 @@ let unique = function (arr) {
         return new Error('参数不合法')
     }
     var obj = {};
-    return arr.filter(item => {
-        return obj.hasOwnProperty(typeof item + item) ? false : (obj[typeof item + item] = true)
+    return arr.filter(v => {
+        return obj.hasOwnProperty(typeof v + v) ? false : (obj[typeof v + v] = true)
     })
 }
 export default unique
