@@ -1,6 +1,6 @@
 /* 
  * this is a my JavaScript library
- * v1.0.3 
+ * v1.0.4 
  */
 /**
  * 
@@ -123,7 +123,7 @@ function checkCommonMobile(mobile) {
 
 /**
  * 
- * @desc   现金额转大写
+ * @desc   现金额阿拉伯数字转换为数字大写
  * @param  {Number} n 
  * @return {String}
  */
@@ -156,6 +156,21 @@ var deepClone = function(obj) {
   };
 
 /**
+ * 数组去重
+ * 利用对象的 hasOwnProperty属性
+ * @param {*} arr 
+ * @return [arr]
+ * 测试数据: [1,2,1,'11','11',true,true,undefined,undefined,null,null,NaN,NaN,{},{},{a:1},{a:1}]
+ * 问题: NaN,{},{a:1}并不能实现去重
+ */
+var unique = function (arr) {
+    var obj = {};
+    return arr.filter(function (item, index, arr) {
+        return obj.hasOwnProperty(typeof item + item) ? false : (obj[typeof item + item] = true)
+    })
+};
+
+/**
  * 判断一个对象是否是空对象,true-是空对象，false-不是空对象
  * @param {*} obj 、
  * @return {Boolean}
@@ -164,4 +179,4 @@ function isEmptyObject(obj) {
     return Object.keys(obj).length > 0 ? false : true
 }
 
-export { hasClass, addClass, removeClass, getCookie, setCookie, removeCookie, checkID, checkMobile, checkCommonMobile, deepClone, isEmptyObject };
+export { hasClass, addClass, removeClass, getCookie, setCookie, removeCookie, checkID, checkMobile, checkCommonMobile, deepClone, unique, isEmptyObject };
