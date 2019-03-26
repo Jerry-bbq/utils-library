@@ -50,6 +50,7 @@ import { digitUppercase } from 'utils-library'
 ### Array
 
 * [deepClone](./src/array/deepClone.js)&emsp;&emsp;数组深拷贝
+* [unique](./src/array/unique.js)&emsp;&emsp;数组去重
 
 ### Object
 
