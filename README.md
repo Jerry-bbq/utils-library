@@ -5,7 +5,9 @@
 安装相关依赖
 
 ``` bash
-yarn install
+yarn install 
+或者 
+npm install
 ```
 
 打包
@@ -30,7 +32,7 @@ npm i utils-library -S
 
 使用
 ``` javascript
-import { digitUppercase } from 'utils-library'
+import { isEmptyObject,format } from 'utils-library'
 ```
 
 ## API文档
