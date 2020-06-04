@@ -3,14 +3,14 @@
  * v1.0.5 
  */
 /**
- * 
+ *
  * @desc 判断元素是否有某个class
- * @param {HTMLElement} ele 
- * @param {String} cls 
+ * @param {HTMLElement} ele
+ * @param {String} cls
  * @return {Boolean}
  */
 function hasClass(ele, cls) {
-    return (new RegExp('(\\s|^)' + cls + '(\\s|$)')).test(ele.className);
+  return new RegExp('(\\s|^)' + cls + '(\\s|$)').test(ele.className)
 }
 
 /**
@@ -130,20 +130,20 @@ function checkCommonMobile(mobile) {
 
 /**
  * @desc 数组,对象的深拷贝
+ * 采用递归的方式对数组和对象进行深拷贝
  */
 var deepClone = function(obj) {
     // 先检测是不是数组和Object
-    // let isArr = Object.prototype.toString.call(obj) === '[object Array]';
-    var isArr = Array.isArray(obj);
-    var isJson = Object.prototype.toString.call(obj) === '[object Object]';
-    if (isArr) {
+    var isArray = Array.isArray(obj);
+    var isObject= Object.prototype.toString.call(obj) === '[object Object]';
+    if (isArray) {
       // 克隆数组
       var newObj = [];
       for (var i = 0; i < obj.length; i++) {
         newObj[i] = deepClone(obj[i]);
       }
       return newObj;
-    } else if (isJson) {
+    } else if (isObject) {
       // 克隆Object
       var newObj$1 = {};
       for (var i$1 in obj) {
@@ -219,4 +219,14 @@ var format = function (date, format) {
     return format;
 };
 
-export { hasClass, addClass, removeClass, getCookie, setCookie, removeCookie, checkID, checkMobile, checkCommonMobile, deepClone, unique, isEmptyObject, format };
+var isWeixin = function () {
+  var ua = navigator.userAgent.toLowerCase();
+  return ua.match(/MicroMessenger/i) == 'micromessenger'
+};
+var isH5 = function () {
+  return window.location.pathname.indexOf('/h5') > -1
+};
+var isIphone = function () { return /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent); };
+var isAndroid = function () { return /(Android)/i.test(navigator.userAgent); };
+
+export { hasClass, addClass, removeClass, getCookie, setCookie, removeCookie, checkID, checkMobile, checkCommonMobile, deepClone, unique, isEmptyObject, format, isWeixin, isH5, isIphone, isAndroid };
