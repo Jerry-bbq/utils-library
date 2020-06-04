@@ -70,3 +70,10 @@ import { digitUppercase } from 'utils-library'
 ### 日期
 
 - [format](./src/date/format.js) &emsp;&emsp;Date对象格式化
+
+### 客户端
+
+- [isWeixin](./src/userAgent/index.js) 微信端
+- [isH5](./src/userAgent/index.js) H5端
+- [isIphone](./src/userAgent/index.js) iPhone
+- [isAndroid](./src/userAgent/index.js) Android
