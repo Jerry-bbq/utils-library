@@ -1,6 +1,6 @@
 /* 
  * this is a my JavaScript library
- * v1.0.4 
+ * v1.0.5 
  */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
